@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import { View, FlatList } from 'react-native';
 import {useSelector, useDispatch} from 'react-redux';
 import { ProductItem } from '../../components/index';
-import { filteredProducts, selectProduct } from '../../store/actions/products.actions';
+import { filteredProducts, selectProduct } from '../store/actions/products.actions';
 import {styles} from './styles';
 
 const ProductsScreen = ({ navigation }) => {
