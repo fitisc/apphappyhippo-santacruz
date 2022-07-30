@@ -17,9 +17,8 @@ const ProductDetailsScreen = () => {
     <View style={styles.container}>
       <View style={styles.detail}>
         <Text style={styles.text}>id: {product.id}</Text>
-        <Text style={styles.text}>{product.name}</Text>
-        <Text style={styles.text}>{product.description}</Text>
-        <Text style={styles.text}>{product.weight}</Text>
+        <Text style={styles.text}>{product.nombre}</Text>
+        <Text style={styles.text}>{product.img}</Text>
         <Text style={styles.text}>${product.price.toFixed(2)}</Text>
         <Button
           color={colors.primary}
