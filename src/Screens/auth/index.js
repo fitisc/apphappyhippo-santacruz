@@ -5,7 +5,7 @@ import { styles } from "./styles";
 import { Input } from "../../components/index";
 import { useDispatch } from "react-redux";
 import { signup, signin } from "../../store/actions/auth.actions";
-import { onInputChange, onFocusOut , UPDATED_FORM } from "../../utils/forms";
+import { onInputChange, onFocusOut , UPDATED_FORM } from "../../utils/form";
 
 const initialState = {
     email: { value: '', touched: false, hasError: true, error: '' },
@@ -17,8 +17,7 @@ const formReducer = (state, action) => {
     switch (action.type) {
         case UPDATED_FORM:
             const { name, value, hasError, error, touched, isFormValid } = action.data;
-            return {
-                ...state,
+            return {...state,
                 [name]: {
                     ...state[name],
                     value,
@@ -36,6 +35,8 @@ const formReducer = (state, action) => {
 const AuthScreen = () => {
     const [formState, dispatchFormState] = useReducer(formReducer, initialState);
     const [isLogin, setIsLogin] = useState(true);
+    const [password, setPassword] = useState(false);
+    const [email, setEmail] = useState(false);
     const dispatch = useDispatch();
     const title = isLogin ? 'Login'  :'Register';
     const message =isLogin ? "Don't you have an account?" : 'Do you have an account?';
