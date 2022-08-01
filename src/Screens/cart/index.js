@@ -9,6 +9,7 @@ const CartScreen = () => {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart.items);
   const total = useSelector((state) => state.cart.total);
+  
   const onHandlerDeleteItem = (id) => {
     dispatch(removeItem(id));
   };

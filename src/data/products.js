@@ -22,7 +22,7 @@ export const products = [
       categoryId: 4,
       nombre: "Vestido nena",
       price: 1750,
-      img: "./img/vestidoplay.png",
+      img: "assets/img/vestidoplay.png",
       cantidad: 6
       
     },
@@ -40,7 +40,7 @@ export const products = [
         categoryId: 2,
         nombre: "Joggins varon",
         price: 1700,
-        img: "./img/jogginsport.png",
+        img: "/assets/img/jogginsport.png",
         cantidad: 3
         
       },
@@ -49,7 +49,7 @@ export const products = [
         categoryId: 3,
         nombre: "Buzo canguro",
         price: 3000,
-        img: "./img/buzocanguro.png",
+        img: "./assets/img/buzocanguro.png",
         cantidad: 6
         
       },
@@ -58,7 +58,7 @@ export const products = [
         categoryId: 3,
         nombre: "Campera con cierre",
         price: 3100,
-        img: "./img/canguroazul.png",
+        img: "/assets/img/canguroazul.png",
         cantidad: 6
         
       },
@@ -67,7 +67,7 @@ export const products = [
         categoryId: 3,
         nombre: "Campera rompeviento",
         price: 3500,
-        img: "./img/camperaverde.png",
+        img: "/assets/img/camperaverde.png",
         cantidad: 5
         
       }

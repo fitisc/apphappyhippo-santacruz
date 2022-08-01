@@ -71,12 +71,13 @@ const AuthScreen = () => {
                     autoCorrect={false}
                     keyboardType='email-address'
                     onChangeText={(text) => onHandleChange(text, 'email')}
-                    onBlur={(e) => onBlurInput(e.nativeEvent.text, 'email')}
+                    onEndEditing={(e) => onBlurInput(e.nativeEvent.text, 'email')}
                     value={formState.email.value}
                     hasError={formState.email.hasError}
                     error={formState.email.error}
                     touched={formState.email.touched}
                     label='Email'
+                    
                 />
                 <Input 
                     placeholder='********'
@@ -85,7 +86,7 @@ const AuthScreen = () => {
                     autoCorrect={false}
                     secureTextEntry={true}
                     onChangeText={(text) => onHandleChange(text, 'password')}
-                    onBlur={(e) => onBlurInput(e.nativeEvent.text, 'password')}
+                    onEndEditing={(e) => onBlurInput(e.nativeEvent.text, 'password')}
                     value={formState.password.value}
                     hasError={formState.password.hasError}
                     error={formState.password.error}

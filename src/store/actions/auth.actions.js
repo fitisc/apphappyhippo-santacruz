@@ -52,7 +52,7 @@ export const signin = (email, password) => {
                 userId: data.localId,
             })
         } catch (error) {
-            console.log(error);
+           // console.log(error);
         }
     }
 }
