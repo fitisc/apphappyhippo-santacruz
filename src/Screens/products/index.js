@@ -1,14 +1,15 @@
 import React, {useEffect} from 'react';
-import { View, FlatList } from 'react-native';
-import {useSelector, useDispatch} from 'react-redux';
+import { View, FlatList} from 'react-native';
 import { ProductItem } from '../../components/index';
-import { selectProduct, filteredProducts } from '../../store/actions/products.actions';
+import {useSelector, useDispatch} from 'react-redux';
+import { filteredProducts, selectProduct } from '../../store/actions/products.actions';
 import {styles} from './styles';
 
 const ProductsScreen = ({ navigation }) => {
      const dispatch = useDispatch();
-
+    const products= useSelector((state) => state.product.products);
     const filterProducts = useSelector((state) => state.product.filteredProducts);
+    const productSelected = useSelector((state) => state.product.selected);
     const category = useSelector((state) => state.category.selected);
 
     useEffect(() => {
@@ -19,7 +20,9 @@ const ProductsScreen = ({ navigation }) => {
     const onSelected = (item) => {
         dispatch(selectProduct(item.id));
         navigation.navigate("ProductDetails", {
+            product: item.product,
             name: item.name,
+            
             
         });
     };
@@ -34,8 +37,10 @@ const ProductsScreen = ({ navigation }) => {
                 data={filterProducts}
                 renderItem={renderItem}
                 keyExtractor={(item) => item.id}
-                numColumns={2}
+                numColumns={1}
+                
                 />
+           
         </View>
     );
 };

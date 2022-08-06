@@ -1,6 +1,4 @@
 import { authTypes } from "../types/auth.types";
-//import { SIGN_UP, SIGN_IN } from "../actions/auth.actions";
-
 
 
 const { SIGN_UP, SIGN_IN } = authTypes;

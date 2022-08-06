@@ -1,5 +1,6 @@
 import { cartTypes } from "../types/cart.types";
 import { URL_API } from "../../constants/database/firebase";
+
 const { ADD_ITEM, REMOVE_ITEM, CONFIRM_CART } = cartTypes;
 
 export const addItem = (item) => ({

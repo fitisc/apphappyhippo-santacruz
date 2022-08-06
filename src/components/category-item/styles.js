@@ -16,8 +16,8 @@ export const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowRadius: 8,
         elevation: 3,
-        justifyContent: "flex-end",
-        alignItems: "flex-end",
+        justifyContent: "center",
+        alignItems: "center",
         padding: 10,
 
     },

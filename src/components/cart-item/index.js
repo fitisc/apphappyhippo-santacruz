@@ -2,7 +2,7 @@ import React from "react";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { View, Text, TouchableOpacity } from "react-native";
 import { styles } from "./styles";
-import { colors } from "../../constants/themes/colors";
+
 
 const CartItem = ({ item, onDelete}) => {
     return (

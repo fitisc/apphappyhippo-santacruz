@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
         fontSize: 30,
         fontWeight: 'bold',
         fontFamily: "OpenSans-Bold",
-        color: "#8b4949",
+        color: "#b46e6e",
         marginTop: 20,
     },
     button: {

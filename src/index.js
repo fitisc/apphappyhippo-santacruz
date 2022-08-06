@@ -1,13 +1,13 @@
 import React from 'react';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+//import { SafeAreaProvider } from 'react-native-safe-area-context';
 import AppNavigator from "./navigation/index"; 
 
 
 const Root = () => {
   return (
-   <SafeAreaProvider>
+   //<SafeAreaProvider>
     <AppNavigator />
-   </SafeAreaProvider>
+   //</SafeAreaProvider>
    
   );
 };

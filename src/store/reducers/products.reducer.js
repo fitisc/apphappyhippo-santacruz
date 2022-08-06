@@ -15,7 +15,8 @@ const productsReducer = (state = initialState, action) => {
         case SELECT_PRODUCT:
             return {
                 ...state,
-                selected: state.products.find((product) => product.id === action.productId),
+                selected: state.products.find(
+                    (product) => product.id === action.productId),
             };
         case FILTERED_PRODUCTS:
             return {

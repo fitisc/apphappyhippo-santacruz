@@ -80,7 +80,7 @@ const AuthScreen = () => {
                     
                 />
                 <Input 
-                    placeholder='********'
+                    placeholder='******'
                     placeholderTextColor={colors.text}
                     autoCapitalize='none'
                     autoCorrect={false}

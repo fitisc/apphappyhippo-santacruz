@@ -1,7 +1,7 @@
 import React from "react";
 import { Text } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Ionicons } from "@expo/vector-icons";
+import {Ionicons} from "@expo/vector-icons";
 import MainNavigator from "./main";
 import CartNavigator from "./cart";
 import OrdersNavigator from "./orders";
@@ -63,7 +63,7 @@ const TabNavigator = () => {
                     tabBarLabel: ({focused}) => LabelBottomTab(focused, "Orders"),
                     TabBarIcon: ({ focused }) => (
                         <Ionicons
-                            name={focused ? "file-tray-full" : "file-tray-outline"} 
+                            name= {focused ? "file-tray-full" : "file-tray-outline"} 
                             size={18}
                             color={focused ? colors.primary : colors.black}
                         />

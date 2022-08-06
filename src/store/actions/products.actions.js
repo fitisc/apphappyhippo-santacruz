@@ -4,7 +4,7 @@ const { SELECT_PRODUCT, FILTERED_PRODUCTS } = productsTypes;
 
 export const selectProduct = (id) => ({
     type: SELECT_PRODUCT,
-    categoryId: id,
+    productId: id,
 });
 
 export const filteredProducts = (id) => ({

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, FlatList, SafeAreaView } from "react-native";
+import { View, Text, FlatList, SafeAreaView, ImageBackground } from "react-native";
 import { CategoryItem } from "../../components/index";
 import { useSelector, useDispatch } from "react-redux";
 import { selectCategory } from "../../store/actions/category.actions";
@@ -16,16 +16,25 @@ const CategoriesScreen = ({ navigation }) => {
     });
   };
 
+  const image = { uri: "../../../assets/img/logoHH.png" };
+
+
   const renderItem = ({ item }) => (
     <CategoryItem item={item} onSelected={onSelected} />
   );
   return (
     <SafeAreaView style={{ flex: 1 }}>
     <View style={styles.container}>
+      <View>
+        <ImageBackground source={{uri: "../../../assets/img/logoHH.png" }} resizeMode="cover" style={styles.image}>
+        <Text style={styles.title}>Bienvenidos a Tienda HAPPY HIPPO</Text>
+        </ImageBackground>
+      </View>
       <FlatList
         data={categories}
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
+        numColumns={1}
       />
     </View>
     </SafeAreaView>

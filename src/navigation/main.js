@@ -17,20 +17,22 @@ const MainNavigator = () => {
             headerTintColor: isIOS ? colors.black : colors.white,
             headerTitleStyle: {fontFamily: "OpenSans-Bold", fontSize: 20},
             }}>
+
             <Stack.Screen 
             name="Categories" 
             component={CategoriesScreen}
             options={{
                 title: "Categories",
-
-                
+  
             }} />
+
             <Stack.Screen 
             name="Products" 
             component={ProductsScreen}
             options= {({route}) => ({
                 title: route.params.title,
             })} />
+
             <Stack.Screen 
             name="ProductDetails" 
             component={ProductDetailsScreen}
@@ -38,6 +40,7 @@ const MainNavigator = () => {
                 title: route.params.name,
             })}
             />
+            
         </Stack.Navigator>
     );
 };
