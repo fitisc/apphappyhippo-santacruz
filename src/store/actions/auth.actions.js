@@ -1,5 +1,27 @@
 import { URL_AUTH_SIGN_UP, URL_AUTH_SIGN_IN } from "../../constants/database/firebase";
+import * as FileSystem from "expo-file-system";
 import { authTypes } from "../types/auth.types";
+
+export const ADD_USER = "ADD_USER";
+
+export const addUser = (image) => {
+    return async dispatch => {
+        const fileName = image.split("/").pop();
+        const Path = FileSystem.documentDirectory + fileName;
+
+        try {
+            FileSystem.moveAsync({
+                from: image,
+                to: Path,
+            })
+        }catch (error) {
+                console.log(error);
+                throw error
+            }
+            dispatch({ type: "ADD_USER", payload: { title, image: Path } });
+        }
+    }
+
 
 const {  SIGN_UP, SIGN_IN} = authTypes;
 

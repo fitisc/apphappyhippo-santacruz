@@ -1,8 +1,10 @@
 import React from "react";
 import { Text } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import {Ionicons} from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
+import { FontAwesome5 } from '@expo/vector-icons';
 import MainNavigator from "./main";
+import AuthNavigator from "./auth";
 import CartNavigator from "./cart";
 import OrdersNavigator from "./orders";
 import { colors } from "../constants/themes/colors";
@@ -33,12 +35,24 @@ const TabNavigator = () => {
                 component={MainNavigator}
                 options={{
                     tabBarLabel: ({focused}) => LabelBottomTab(focused, "Shop"),
-                    TabBarIcon: ({ focused }) => (
+                    TabBarIcon: ({ focused}) => (
                         <Ionicons
-                            name= {focused ? "home" : "home-outline"}
+                            name= "home"
                             size={18}
                             color={focused ? colors.primary : colors.black}
                         />
+                    ),
+                }}
+            />
+            <BottomTabs.Screen
+                name="LoginTab"
+                component={AuthNavigator}
+                options={{
+                    tabBarLabel: ({focused}) => LabelBottomTab(focused, "Login"),
+                    TabBarIcon: ({ focused }) => (
+                    <FontAwesome5 name="user-circle" 
+                    size={24} 
+                    color={focused ? colors.primary : colors.black} />
                     ),
                 }}
             />

@@ -5,7 +5,8 @@ import { styles } from "./styles";
 import { Input } from "../../components/index";
 import { useDispatch } from "react-redux";
 import { signup, signin } from "../../store/actions/auth.actions";
-import { onInputChange, onFocusOut , UPDATED_FORM } from "../../utils/form";
+import { onFocusOut, onInputChange, UPDATED_FORM } from "../../utils/form";
+import { ImageSelector } from "../../components/index";
 
 const initialState = {
     email: { value: '', touched: false, hasError: true, error: '' },
@@ -13,7 +14,7 @@ const initialState = {
     isFormValid: false
 }
 
-const formReducer = (state, action) => {
+export const formReducer = (state, action) => {
     switch (action.type) {
         case UPDATED_FORM:
             const { name, value, hasError, error, touched, isFormValid } = action.data;
@@ -37,6 +38,7 @@ const AuthScreen = () => {
     const [isLogin, setIsLogin] = useState(true);
     const [password, setPassword] = useState(false);
     const [email, setEmail] = useState(false);
+    const [image, setImage] = useState(null);
     const dispatch = useDispatch();
     const title = isLogin ? 'Login'  :'Register';
     const message =isLogin ? "Don't you have an account?" : 'Do you have an account?';
@@ -53,6 +55,7 @@ const AuthScreen = () => {
     const onBlurInput = (text, type) => {
         onFocusOut(type, text, dispatchFormState, formState);
     }
+    const onHandleImageSelect = (imageUrl) => setImage(imageUrl);
 
     const handleChangeAuth = () => {
         setPassword('');
@@ -61,10 +64,12 @@ const AuthScreen = () => {
     }
 
     return (
-        <KeyboardAvoidingView style={styles.containerKeyboard} behavior='height'>
+        <KeyboardAvoidingView style={styles.containerKeyboard} behavior='height' keyboardVerticalOffset={30}>
             <View style={styles.container}>
                 <Text style={styles.title}>{title}</Text>
+                <ImageSelector style={styles.imagecontainer} onImage={onHandleImageSelect} />
                 <Input 
+                    id="email"
                     placeholder='example@gmail.com'
                     placeholderTextColor={colors.text}
                     autoCapitalize='none'
@@ -80,6 +85,7 @@ const AuthScreen = () => {
                     
                 />
                 <Input 
+                    id="password" 
                     placeholder='******'
                     placeholderTextColor={colors.text}
                     autoCapitalize='none'
@@ -87,6 +93,7 @@ const AuthScreen = () => {
                     secureTextEntry={true}
                     onChangeText={(text) => onHandleChange(text, 'password')}
                     onEndEditing={(e) => onBlurInput(e.nativeEvent.text, 'password')}
+                    intialValue=""
                     value={formState.password.value}
                     hasError={formState.password.hasError}
                     error={formState.password.error}

@@ -1,7 +1,7 @@
 import React from "react";
 import { Platform } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { AuthScreen } from "../Screens/Index.js";
+import { AuthScreen } from "../Screens/Index";
 import { colors } from "../constants/themes/colors";
 
 const Stack = createNativeStackNavigator();

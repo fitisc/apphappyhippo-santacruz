@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 import { colors } from "../../constants/themes/colors";
+
 export const styles = StyleSheet.create({
     containerKeyboard: {
         flex: 1,
@@ -7,9 +8,9 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
     },
     container: {
-        height: 300,
-        width: '80%',
-        maxWidth: 400,
+        height: 800,
+        width: '90%',
+        maxWidth: 900,
         padding: 15,
         margin: 15,
         borderColor: colors.primary,
@@ -25,9 +26,19 @@ export const styles = StyleSheet.create({
     title: {
         fontSize: 18,
         fontFamily: 'OpenSans-Bold',
-        marginBottom: 15,
+        marginBottom: 30,
         textAlign: 'center',
     },
+    imagecontainer: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: 15,
+    },
+    image: {
+        width: '100%',
+        height: '100%',
+    },
+  
     propmt: {
         flexDirection: 'row',
         alignItems: 'center',

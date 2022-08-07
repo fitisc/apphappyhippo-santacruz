@@ -1,7 +1,7 @@
 export const categories = [ {
     id: 1,
     title: 'REMERAS',
-    color: '#C6CAED',
+    color: '#c27b7b',
 },
 {
     id: 2,
@@ -11,7 +11,7 @@ export const categories = [ {
 {
     id: 3,
     title: 'VESTIDOS',
-    color: '#A28497',
+    color: '#a17878',
 },
 {
     id: 4,
