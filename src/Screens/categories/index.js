@@ -26,8 +26,8 @@ const CategoriesScreen = ({ navigation }) => {
     <SafeAreaView style={{ flex: 1 }}>
     <View style={styles.container}>
       <View>
-        <ImageBackground source={{uri: "../../../assets/img/logoHH.png" }} resizeMode="cover" style={styles.image}>
-        <Text style={styles.title}>Bienvenidos a Tienda HAPPY HIPPO</Text>
+        <ImageBackground source={image} resizeMode="cover" style={styles.image}>
+          <Text style={styles.title}>"Bienvenidos a Tienda HAPPY HIPPO"</Text>
         </ImageBackground>
       </View>
       <FlatList

@@ -7,9 +7,9 @@ import {styles} from './styles';
 
 const ProductsScreen = ({ navigation }) => {
      const dispatch = useDispatch();
-    const products= useSelector((state) => state.product.products);
+    
     const filterProducts = useSelector((state) => state.product.filteredProducts);
-    const productSelected = useSelector((state) => state.product.selected);
+    
     const category = useSelector((state) => state.category.selected);
 
     useEffect(() => {

@@ -8,9 +8,9 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
     },
     container: {
-        height: 800,
-        width: '90%',
-        maxWidth: 900,
+        height: 750,
+        width: '80%',
+        maxWidth: 800,
         padding: 15,
         margin: 15,
         borderColor: colors.primary,
@@ -26,7 +26,7 @@ export const styles = StyleSheet.create({
     title: {
         fontSize: 18,
         fontFamily: 'OpenSans-Bold',
-        marginBottom: 30,
+        marginBottom: 35,
         textAlign: 'center',
     },
     imagecontainer: {

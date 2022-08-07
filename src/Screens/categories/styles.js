@@ -8,7 +8,9 @@ export const styles = StyleSheet.create({
      
     },
     title: {
-        color: colors.primary,
+        color: colors.secondary,
+        justifyContent: "center",
+        alignItems: "center",
         fontSize: 35,
         fontWeight: 'bold',
         fontFamily: 'OpenSans-Bold',
