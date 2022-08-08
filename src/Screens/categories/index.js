@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, FlatList, SafeAreaView, ImageBackground } from "react-native";
+import { View, Text, FlatList, SafeAreaView} from "react-native";
 import { CategoryItem } from "../../components/index";
 import { useSelector, useDispatch } from "react-redux";
 import { selectCategory } from "../../store/actions/category.actions";
@@ -16,7 +16,7 @@ const CategoriesScreen = ({ navigation }) => {
     });
   };
 
-  const image = { uri: "../../../assets/img/logoHH.png" };
+  
 
 
   const renderItem = ({ item }) => (
@@ -26,9 +26,7 @@ const CategoriesScreen = ({ navigation }) => {
     <SafeAreaView style={{ flex: 1 }}>
     <View style={styles.container}>
       <View>
-        <ImageBackground source={image} resizeMode="cover" style={styles.image}>
           <Text style={styles.title}>"Bienvenidos a Tienda HAPPY HIPPO"</Text>
-        </ImageBackground>
       </View>
       <FlatList
         data={categories}

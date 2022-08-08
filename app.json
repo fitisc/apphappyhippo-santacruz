@@ -7,7 +7,7 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/loghh.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -18,16 +18,18 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.fiti.apphappyhippo"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/loghh.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.fiti.apphappyhippo"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/loghh.png"
     }
   }
 }

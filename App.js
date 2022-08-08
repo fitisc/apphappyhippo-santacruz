@@ -7,8 +7,6 @@ import store from "./src/store";
 
 
 
-
-
 export default function App() {
   const [fontsLoaded] = useFonts({
     "OpenSans-Regular": require("./assets/fonts/static/OpenSans/OpenSans-Regular.ttf"),
